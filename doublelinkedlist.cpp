@@ -88,5 +88,22 @@ public:
         {
             current = current -> next;
         }
+        if (current == NULL){
+            cout << "Record Not Found" << endl;
+            return;
+        }
+        if (current == START){
+            START = current->next;
+            if (START != NULL){
+                START -> prev = NULL;
+            }
+        }else{
+            current->prev->next = current->next;
+            if (current->next != NULL){
+                current->next->prev = current->prev;
+            }
+        }
+        delete current;
+        cout << "record with roll number" << rollNo << "delete" << endl;
     }
 };
