@@ -43,6 +43,8 @@ public:
 
             if (START != NULL)
                 START->prev = newNode;
+
+                newNode-> = NULL;
         }
     }
 };
