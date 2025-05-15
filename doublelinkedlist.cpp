@@ -30,5 +30,8 @@ class DoubleLinkedList
 
 
         Node *newNode = new Node();
+
+
+        newNode->noMhs = nim;
     }
 }
