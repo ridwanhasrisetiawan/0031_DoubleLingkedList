@@ -2,9 +2,9 @@
 #include <string>
 using namespace std;
 
-class Node 
+class Node
 {
-    public:
+public:
     int noMhs;
     Node *next;
     Node *prev;
@@ -12,10 +12,10 @@ class Node
 
 class DoubleLinkedList
 {
-    private:
+private:
     Node *START;
 
-    public:
+public:
     DoubleLinkedList()
     {
         START = NULL;
@@ -28,12 +28,9 @@ class DoubleLinkedList
         cout << "\nEnter the roll number of  the student";
         cin >> nim;
 
-
         Node *newNode = new Node();
 
-
         newNode->noMhs = nim;
-
 
         if (START == NULL || nim <= START->noMhs)
         {
@@ -43,6 +40,9 @@ class DoubleLinkedList
                 return;
             }
             newNode->next = START;
+
+            if (START != NULL)
+                START->prev = newNode;
         }
     }
 };
