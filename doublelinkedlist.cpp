@@ -44,7 +44,10 @@ public:
             if (START != NULL)
                 START->prev = newNode;
 
-                newNode-> = NULL;
+                newNode->prev = NULL;
+
+                START = newNode;
+                return;
         }
     }
 };
