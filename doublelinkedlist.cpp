@@ -8,4 +8,16 @@ class Node
     int nomMhs;
     Node *next;
     Node *prev;
+};
+
+class DoubleLinkedList
+{
+    private:
+    Node *START;
+
+    public:
+    DoubleLinkedList()
+    {
+        START = NULL;
+    }
 }
